@@ -9,20 +9,20 @@ public class WeatherDataParser implements DataParser<WeatherData> {
     public WeatherData parse(Map<String, String> map) {
         WeatherData weatherData = new WeatherData();
 
-        weatherData.setDay(parseInt(map, "day"));
-        weatherData.setMxT(parseDouble(map, "mxT"));
-        weatherData.setMnT(parseDouble(map, "mnT"));
-        weatherData.setAvT(parseDouble(map, "avT"));
-        weatherData.setAvDP(parseDouble(map, "avDP"));
-        weatherData.setOneHrP_TPcpn(parseDouble(map, "oneHrP_TPcpn"));
-        weatherData.setpDir(parseDouble(map, "pDir"));
-        weatherData.setAvSp(parseDouble(map, "avSp"));
-        weatherData.setDir(parseDouble(map, "dir"));
-        weatherData.setMxS(parseDouble(map, "mxS"));
-        weatherData.setSkyC(parseDouble(map, "skyC"));
-        weatherData.setMxR(parseDouble(map, "mxR"));
-        weatherData.setMn(parseDouble(map, "mn"));
-        weatherData.setR_AvSLP(parseDouble(map, "r_AvSLP"));
+        weatherData.setDay(parseInt(map, "Day"));
+        weatherData.setMxT(parseDouble(map, "MxT"));
+        weatherData.setMnT(parseDouble(map, "MnT"));
+        weatherData.setAvT(parseDouble(map, "AvT"));
+        weatherData.setAvDP(parseDouble(map, "AvDP"));
+        weatherData.setOneHrP_TPcpn(parseDouble(map, "1HrP TPcpn"));
+        weatherData.setpDir(parseDouble(map, "PDir"));
+        weatherData.setAvSp(parseDouble(map, "AvSp"));
+        weatherData.setDir(parseDouble(map, "Dir"));
+        weatherData.setMxS(parseDouble(map, "MxS"));
+        weatherData.setSkyC(parseDouble(map, "SkyC"));
+        weatherData.setMxR(parseDouble(map, "MxR"));
+        weatherData.setMn(parseDouble(map, "Mn"));
+        weatherData.setR_AvSLP(parseDouble(map, "R AvSLP"));
 
         return weatherData;
     }

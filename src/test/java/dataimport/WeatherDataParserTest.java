@@ -36,20 +36,20 @@ public class WeatherDataParserTest {
 	@Test
     void wrongFormatFoundThrows(){
 		Map<String, String> data = new HashMap<>();
-		data.put("day", "1");
-		data.put("mxT", "string");
-		data.put("mnT", "59");
-		data.put("avT", "74");
-		data.put("avDP", "53.8");
-		data.put("oneHrP_TPcpn", "0");
-		data.put("pDir", "280");
-		data.put("avSp", "9.6");
-		data.put("dir", "270");
-		data.put("mxS", "17");
-		data.put("skyC", "1.6");
-		data.put("mxR", "93");
-		data.put("mn", "23");
-		data.put("r_AvSLP", "1004.5");
+		data.put("Day", "1");
+		data.put("MxT", "string");
+		data.put("MnT", "59");
+		data.put("AvT", "74");
+		data.put("AvDP", "53.8");
+		data.put("1HrP TPcpn", "0");
+		data.put("PDir", "280");
+		data.put("AvSp", "9.6");
+		data.put("Dir", "270");
+		data.put("MxS", "17");
+		data.put("SkyC", "1.6");
+		data.put("MxR", "93");
+		data.put("Mn", "23");
+		data.put("R AvSLP", "1004.5");
 	    
     	WeatherDataParser parser = new WeatherDataParser();
     	assertThrows(NumberFormatException.class, () -> {
@@ -60,20 +60,20 @@ public class WeatherDataParserTest {
 	@Test
     void shouldParseCorrectFormat(){
 		Map<String, String> data = new HashMap<>();
-		data.put("day", "1");
-		data.put("mxT", "88");
-		data.put("mnT", "59");
-		data.put("avT", "74");
-		data.put("avDP", "53.8");
-		data.put("oneHrP_TPcpn", "0");
-		data.put("pDir", "280");
-		data.put("avSp", "9.6");
-		data.put("dir", "270");
-		data.put("mxS", "17");
-		data.put("skyC", "1.6");
-		data.put("mxR", "93");
-		data.put("mn", "23");
-		data.put("r_AvSLP", "1004.5");
+		data.put("Day", "1");
+		data.put("MxT", "88");
+		data.put("MnT", "59");
+		data.put("AvT", "74");
+		data.put("AvDP", "53.8");
+		data.put("1HrP TPcpn", "0");
+		data.put("PDir", "280");
+		data.put("AvSp", "9.6");
+		data.put("Dir", "270");
+		data.put("MxS", "17");
+		data.put("SkyC", "1.6");
+		data.put("MxR", "93");
+		data.put("Mn", "23");
+		data.put("R AvSLP", "1004.5");
 	    
     	WeatherDataParser parser = new WeatherDataParser();
     	WeatherData weatherData = parser.parse(data);
