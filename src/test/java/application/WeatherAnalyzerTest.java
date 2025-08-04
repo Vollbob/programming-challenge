@@ -18,14 +18,17 @@ public class WeatherAnalyzerTest {
 		List<WeatherData> weatherData = new ArrayList<WeatherData>();
 		
 		WeatherData weatherData1 = new WeatherData();
+		weatherData1.setDay(1);
 		weatherData1.setMxT(20);
 		weatherData1.setMnT(0);
 		
 		WeatherData weatherData2 = new WeatherData();
+		weatherData2.setDay(2);
 		weatherData2.setMxT(10);
 		weatherData2.setMnT(0);
 		
 		WeatherData weatherData3 = new WeatherData();
+		weatherData3.setDay(3);
 		weatherData3.setMxT(20);
 		weatherData3.setMnT(15);
 		
@@ -35,7 +38,7 @@ public class WeatherAnalyzerTest {
 		
 		WeatherAnalyzer analyzer = new WeatherAnalyzer();
 		
-    	assertEquals(5, analyzer.findMinimumDifference(weatherData), "The smallest spread should be 5.");
+    	assertEquals("3", analyzer.findMinimumDifference(weatherData), "The day of the smallest spread should be Day 3.");
     }
 	
 	@Test
@@ -43,14 +46,17 @@ public class WeatherAnalyzerTest {
 		List<WeatherData> weatherData = new ArrayList<WeatherData>();
 		
 		WeatherData weatherData1 = new WeatherData();
+		weatherData1.setDay(1);
 		weatherData1.setMxT(20);
 		weatherData1.setMnT(18);
 		
 		WeatherData weatherData2 = new WeatherData();
+		weatherData2.setDay(2);
 		weatherData2.setMxT(20);
 		weatherData2.setMnT(18);
 		
 		WeatherData weatherData3 = new WeatherData();
+		weatherData3.setDay(3);
 		weatherData3.setMxT(20);
 		weatherData3.setMnT(18);
 		
@@ -60,6 +66,6 @@ public class WeatherAnalyzerTest {
 		
 		WeatherAnalyzer analyzer = new WeatherAnalyzer();
 		
-    	assertEquals(2, analyzer.findMinimumDifference(weatherData), "The smallest spread should be 2.");
+    	assertEquals("1", analyzer.findMinimumDifference(weatherData), "The day of the smallest spread should be Day 1.");
     }
 }

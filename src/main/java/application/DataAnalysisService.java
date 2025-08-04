@@ -19,7 +19,7 @@ public class DataAnalysisService<T> {
      this.dataAnalyzer = analyzer;
  }
  
- public double analyzeData(String dataSource) throws IOException{
+ public String analyzeData(String dataSource) throws IOException{
      List<Map<String, String>> rawData = dataReader.readData(dataSource);
      
      
