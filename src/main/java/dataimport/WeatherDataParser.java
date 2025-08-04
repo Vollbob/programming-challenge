@@ -26,7 +26,9 @@ public class WeatherDataParser implements DataParser<WeatherData> {
 
         return weatherData;
     }
-
+    
+    //Throws Exception, if a value is not present or not parsable to int
+    //TODO: Maybe refactor exception handling to accept Objects with some keys/values missing or handle special cases, according to what is needed
     private int parseInt(Map<String, String> map, String key) {
         String value = map.get(key);
         if (value == null) {
@@ -39,6 +41,8 @@ public class WeatherDataParser implements DataParser<WeatherData> {
         }
     }
 
+    //Throws Exception, if a value is not present or not parsable to double
+    //TODO: Maybe refactor exception handling to accept Objects with some keys/values missing or handle special cases, according to what is needed
     private double parseDouble(Map<String, String> map, String key) {
         String value = map.get(key);
         if (value == null) {
