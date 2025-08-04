@@ -16,6 +16,10 @@ public class WeatherData {
 	private double mn;
 	private double r_AvSLP;
 	
+	public WeatherData() {
+		
+	}
+	
 	public WeatherData(int day, double mxT, double mnT, double avT, 
 			double avDP, double oneHrP_TPcpn, double pDir, double avSp, double dir, double mxS, double skyC, double mxR, 
 			double mn, double r_AvSLP){
