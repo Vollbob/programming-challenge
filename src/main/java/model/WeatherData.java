@@ -1,7 +1,7 @@
 package model;
 
 public class WeatherData {
-	private double day;
+	private int day;
 	private double mxT;
 	private double mnT;
 	private double avT;
@@ -16,7 +16,7 @@ public class WeatherData {
 	private double mn;
 	private double r_AvSLP;
 	
-	public WeatherData(double day, double mxT, double mnT, double avT, 
+	public WeatherData(int day, double mxT, double mnT, double avT, 
 			double avDP, double oneHrP_TPcpn, double pDir, double avSp, double dir, double mxS, double skyC, double mxR, 
 			double mn, double r_AvSLP){
 		this.setDay(day);
@@ -35,11 +35,11 @@ public class WeatherData {
 		this.setR_AvSLP(r_AvSLP);
 	}
 
-	public double getDay() {
+	public int getDay() {
 		return day;
 	}
 
-	public void setDay(double day) {
+	public void setDay(int day) {
 		this.day = day;
 	}
 
