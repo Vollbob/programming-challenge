@@ -43,7 +43,7 @@ public class FootballAnalyzerTest {
 	
 	@Test
     void correctSmallestSpreadEqual() throws IOException, URISyntaxException{
-List<FootballTeamData> footballData = new ArrayList<FootballTeamData>();
+		List<FootballTeamData> footballData = new ArrayList<FootballTeamData>();
 		
 		FootballTeamData footballData1 = new FootballTeamData();
 		footballData1.setTeam("Manchester");

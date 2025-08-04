@@ -23,9 +23,10 @@ public final class App {
      * @throws URISyntaxException 
      */
     public static void main(String... args) throws IOException, URISyntaxException {
+    	final String packagePath = new String("de/exxcellent/challenge/");
     	
     	DataAnalysisService<WeatherData> weatherDataAnalysisService = new DataAnalysisService<WeatherData>(new CsvReader(","), new WeatherDataParser(), new WeatherAnalyzer());
-    	URL weatherResource = App.class.getClassLoader().getResource("de/exxcellent/challenge/weather.csv");
+    	URL weatherResource = App.class.getClassLoader().getResource(packagePath + "weather.csv");
         File weatherFile = new File(weatherResource.toURI());
         
         String dayWithSmallestTempSpread = weatherDataAnalysisService.analyzeData(weatherFile.getAbsolutePath());
@@ -33,7 +34,7 @@ public final class App {
         
         
         DataAnalysisService<FootballTeamData> footballDataAnalysisService = new DataAnalysisService<FootballTeamData>(new CsvReader(","), new FootballTeamDataParser(), new FootballAnalyzer());
-    	URL footballResource = App.class.getClassLoader().getResource("de/exxcellent/challenge/football.csv");
+    	URL footballResource = App.class.getClassLoader().getResource(packagePath + "football.csv");
         File footballFile = new File(footballResource.toURI());
 
         String teamWithSmallestGoalSpread = footballDataAnalysisService.analyzeData(footballFile.getAbsolutePath());

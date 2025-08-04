@@ -12,10 +12,6 @@ import java.net.URL;
 import java.util.List;
 import java.util.Map;
 
-/**
- * Test cases for the CsvDataReader.
- * @author Daniel Schäferling
- */
 class CsvDataReaderTest {
 	
 	@Test
