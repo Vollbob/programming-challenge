@@ -22,7 +22,7 @@ public class FootballAnalyzer implements DataAnalyzer<FootballTeamData>{
     		int actualDifference = Math.abs(footballData.get(i).getGoals() - footballData.get(i).getGoals_allowed());
     		if (actualDifference < minimumDifference) {
     			minimumDifference = actualDifference;
-    			teamName = footballData.get(0).getTeam();
+    			teamName = footballData.get(i).getTeam();
     		}
     	}
         return teamName;

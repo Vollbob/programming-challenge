@@ -19,12 +19,12 @@ public class FootballAnalyzerTest {
 		
 		FootballTeamData footballData1 = new FootballTeamData();
 		footballData1.setTeam("Arsenal");
-		footballData1.setGoals(79);;
+		footballData1.setGoals(79);
 		footballData1.setGoals_allowed(36);
 		
 		FootballTeamData footballData2 = new FootballTeamData();
 		footballData2.setTeam("Liverpool");
-		footballData2.setGoals(67);;
+		footballData2.setGoals(67);
 		footballData2.setGoals_allowed(30);
 		
 		FootballTeamData footballData3 = new FootballTeamData();
@@ -38,7 +38,7 @@ public class FootballAnalyzerTest {
 		
 		FootballAnalyzer analyzer = new FootballAnalyzer();
 		
-    	assertEquals("Arsenal", analyzer.findMinimumDifference(footballData), "The team with the smallest distance should be Arsenal.");
+    	assertEquals("Liverpool", analyzer.findMinimumDifference(footballData), "The team with the smallest distance should be Liverpool.");
     }
 	
 	@Test
@@ -46,17 +46,17 @@ public class FootballAnalyzerTest {
 List<FootballTeamData> footballData = new ArrayList<FootballTeamData>();
 		
 		FootballTeamData footballData1 = new FootballTeamData();
-		footballData1.setTeam("Liverpool");
-		footballData1.setGoals(79);;
+		footballData1.setTeam("Manchester");
+		footballData1.setGoals(79);
 		footballData1.setGoals_allowed(36);
 		
 		FootballTeamData footballData2 = new FootballTeamData();
 		footballData2.setTeam("Arsenal");
-		footballData2.setGoals(79);;
+		footballData2.setGoals(79);
 		footballData2.setGoals_allowed(36);
 		
 		FootballTeamData footballData3 = new FootballTeamData();
-		footballData3.setTeam("Manchester");
+		footballData3.setTeam("Liverpool");
 		footballData3.setGoals(79);
 		footballData3.setGoals_allowed(36);
 		
@@ -66,7 +66,7 @@ List<FootballTeamData> footballData = new ArrayList<FootballTeamData>();
 		
 		FootballAnalyzer analyzer = new FootballAnalyzer();
 		
-    	assertEquals("Liverpool", analyzer.findMinimumDifference(footballData), "The team with the smallest distance should be Liverpool.");
+    	assertEquals("Manchester", analyzer.findMinimumDifference(footballData), "The team with the smallest distance should be Manchester.");
     }
 
 }
